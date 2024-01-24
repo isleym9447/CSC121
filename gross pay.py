@@ -7,20 +7,28 @@ Created on Wed Jan 24 13:32:32 2024
 
 
 
-#get number of employees user is calculating for 
-emp_num = int(input("Enter number of employees: "))
-
-
 #define and assign initial value before the loop begins
 #running total to cal total of salaries owed
 
-total = 0 
-
-for num in range(1,emp_num+1):
+total = 0 #store salaries
+#count = 0 #to count employees
 
 # calculate gross pay
-    print("\nInfo for Employee #", num)
+
+name = input("Enter employee name or 'stop' to terminate program: ")
+
+
+while name != "stop":
+
+    print("\nInfo for", name)
     hours = float(input("Enter hours worked: "))
+    while hours < 0 :
+        
+        print("\nINVALID ENTRY!")
+        print("Must be between 0 and 40")
+        hours = float(input("\nEnter hours worked again: "))
+    
+    
     
     rate = float(input("Enter pay rate: "))
     
@@ -35,9 +43,10 @@ for num in range(1,emp_num+1):
     
     print(f'Gross pay: ${gross}')
     
-print(f'\nTotal Salaraies: ${total}')
+    name = input("Enter next employee name or 'stop' to terminate program: ")
 
-
+    print(f'\nTotal Salaries: ${total}')
+    
 
 
 
