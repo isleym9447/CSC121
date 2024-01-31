@@ -8,13 +8,20 @@ This is a temporary script file.
 
 def main():
     get_name()
+    calc_nums()
+    '''
+    function asks for their first name and then says hi
+    '''
     
     
+def calc_nums():
+    # function asks for 2 nums add them and display result
     
-def get_name():
     
-    first = input("Enter your name: ")
+    first = input("Enter first num: ")
+    second = input("Enter second num: ")
     
-    print ("Hello", first)
+    total = first = second
+    print("total: ", total)
     
 main()
