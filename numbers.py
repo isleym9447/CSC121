@@ -36,7 +36,7 @@ print(f'{""*5:<5}{total_sqr:<5}{total_cube}')
 
 
 
-
+# comment
 
 
 
